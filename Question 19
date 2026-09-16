@@ -1,0 +1,12 @@
+void trianlgle(int side_1,int side_2,int side_3){
+if(side_1 ==side_2 && side_2==side_3){
+printf("This is a equilateral triangle");
+}else{
+if(side_1 == side_2||side_2==side_3||side_1==side_3){
+printf("this is a isoscales triangle.");
+}else{
+printf("This is a scalene triangle");
+}
+}
+return;
+}
