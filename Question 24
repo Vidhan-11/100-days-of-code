@@ -1,0 +1,15 @@
+void bill(int units){
+if(units <= 100){
+  printf("Your fine is :%d",(units)*5);
+}
+else if(units >100 && units < 200){
+  printf("Your fine is :%d",(units)*7);
+}
+else if(units >= 200 && units <=300){
+  printf("Your fine is :%d",(units)*10);
+}
+else if(units > 300){
+  printf("Your fine is :%d",units*12);
+}
+return;
+}
