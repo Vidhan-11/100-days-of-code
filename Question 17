@@ -1,0 +1,16 @@
+#include<math.h>
+void roots(float coff_1,float coff_2,float coff_3){
+float D;
+if((pow(coff_2,2) - 4*coff_1*coff_3) >= 0){
+D = sqrt((pow(coff_2,2) - 4*coff_1*coff_3));
+}else{
+printf("Roots are complex");
+return;
+}
+if(D == 0){
+printf("Roots are same.\nRoots are:%.1f,%.1f",(0-coff_2)/(2*coff_1),(0-coff_2)/(2*coff_1));
+}else{
+printf("Roots are Real and Distinct.\nRoots are:%.1f,%.1f",(0-coff_2 + D)/(2*coff_1),(0-coff_2 - D)/(2*coff_1));
+}
+return;
+}
