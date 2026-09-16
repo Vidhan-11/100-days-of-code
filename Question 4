@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main(){
+  float a;
+  printf("Input number \n");
+  scanf("%d",&a);
+  printf("Circumference of Circle is :%f\n",2*(3.14)*a);
+  printf("Area of rectangle is %f:",(3.14)*a*a);
+  return 0;
+}
