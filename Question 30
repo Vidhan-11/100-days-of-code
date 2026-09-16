@@ -1,0 +1,8 @@
+int reverse(int number){
+int new =0 ;
+while(number>0){
+new += n%10;
+number = number/10;
+}
+return new;
+}
