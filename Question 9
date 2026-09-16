@@ -1,0 +1,6 @@
+#include<math.h>
+void interest(float principle,float interest,float time,float n){
+printf("Simple interest for these entries is:%f\n",((principle*interest)*time)/100);
+printf("Compound interest for these entries is:%f",pow((principle(1 + (interest/n)),n*time);
+return;
+}
