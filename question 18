@@ -1,0 +1,15 @@
+void Grading(float percentage){
+if(percentage <60){
+printf("Your grade is F");
+return;
+}
+char grade = 'A';
+for(int i =100;i >=60;i-=10 ){
+if(percentage >= (i-10)){
+printf("Your grade is %c",grade);
+return;
+}
+grade++;
+}
+return;
+}
