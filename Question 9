@@ -1,0 +1,9 @@
+void time(int sec){
+int hours,minutes;
+hours = sec/3600;
+sec = sec%3600;
+minutes = sec/60;
+sec = sec%60;
+printf("%d:%d:%d",hours,minutes,sec);
+return ;
+}
