@@ -1,0 +1,9 @@
+void Margin(float price,float selling_price){
+
+if(price >= selling_price){
+printf("Loss percentage is :%f",((price - selling_price)/price)*100);
+}else{
+printf("Loss percentage is :%f",((selling_price - price)/price)*100);
+}
+return ;
+}
