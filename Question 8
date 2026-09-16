@@ -1,0 +1,4 @@
+void total_sum(int n){
+printf("\nSum of first n natural numbers is:%d\n",n(n+1)/2);
+return;
+}
