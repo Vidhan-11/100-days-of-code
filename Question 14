@@ -1,0 +1,16 @@
+void vowel(char a){
+if(a =='a'||a =='e'||a=='i'||a=='o'||a=='u'){
+printf("The number is a vowel..");
+return;
+}else{
+printf("The number is a consonent..");
+return;
+}
+if(a =='A'||a =='E'||a=='I'||a=='O'||a=='U'){
+printf("The number is a vowel..");
+return;
+}else{
+printf("The number is a consonent..");
+return;
+}
+}
