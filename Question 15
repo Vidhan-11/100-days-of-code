@@ -1,0 +1,13 @@
+void check(char a){
+if(65<= a < 91){
+printf("It is a uppercase alphabat");
+}
+if(a>=97){
+printf("it is a lowercase alphabet.");
+}if(48<=a<=57){
+printf("It is a digit.");
+}else{
+printf("It is a special character.");
+}
+return;
+}
