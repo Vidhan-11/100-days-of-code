@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main(){
+int a,b,operation;
+printf("Number 1: \n");
+scanf("%d",&a);
+printf("Number 2: \n");
+scanf("%d",&b);
+printf("Which operation do you want to perform:\n1.For Plus\n2.For Minus\n3.for Multiplication\n4.For Quotient");
+scanf("%d",&operation);
+switch(operation){
+case 1:
+printf("Result is: %d",a+b);
+case 2:
+printf("Result is: %d",a-b);
+case 3:
+printf("Result is: %d",a*b);
+case 4:
+printf("Result is: %d",a/b);
+default:
+printf("\nInvlid entry for operation");
+}
+return 0;
+}
