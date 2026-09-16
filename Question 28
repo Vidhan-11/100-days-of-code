@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main(){
+int n,product;
+printf("Number :");
+scanf("%d",&n);
+for(int i = 1;i<n;i++){
+product *= 2*i;
+}
+printf("Product : %d",product);
+}
