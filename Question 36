@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main(){
+	int number1,number2,loop,HCF =1;
+	printf("Number 1 :\n");
+	scanf("%d",&number1);
+	printf("Number 2 :\n");
+	scanf("%d",&number2);
+	if(number1 > number2){
+  loop = number1;
+  }else{
+  loop = number2;
+  }
+	for(int i =1;i<loop;i++){
+		if(number1 %i == 0 && number2%i == 0){
+			if(i > HCF){
+				HCF = i;
+			}
+		}
+	}
+	printf("HCF is %d",HCF);
+	return 0;
+}
