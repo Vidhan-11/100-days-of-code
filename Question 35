@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main(){
+	int number;
+	printf("Number :\n");
+	scanf("%d",&number);
+	printf("Factors:\n");
+	for(int i =1;i<number;i++){
+		if(number%i == 0){
+			printf("%d\t",i);
+		}
+	}
+	
+	return 0;
+}
