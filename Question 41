@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+    int number,copy,digits = 1,remainder = 0,first = 0,last = 0;
+    copy = number;
+    printf("Number :\n");
+    scanf("%d",&number);
+    while(number>0){
+        digits *= 10;
+        number /10;
+    }
+    first += copy/digits;
+    last += copy/10;
+    remainder = copy - first - last;
+    copy = 0;
+    copy += (last*digits) + remainder + first/digits;
+    printf("Number : %d",copy);
+    return 0;
+}
