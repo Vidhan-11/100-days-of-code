@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+    int number,perfect =0;
+    printf("Number : \n");
+    scanf("%d",&number);
+    for(int i = 1;i<number;i++){
+        if(number %i == 0){
+            perfect += i;
+        }
+    }
+    if(perfect == number){
+        printf("This is a perfect number");
+    }else{
+        printf("This is not a perfect number");
+    }
+
+    return 0;
+}
