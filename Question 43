@@ -1,0 +1,27 @@
+#include<stdio.h>
+int factorial(int n);
+int main(){
+    int number,copy,strong,i=10;
+    printf("Number : \n"){
+        scanf("%d",&number);
+    }
+    copy = number;
+    while(number >0){
+        strong += factorial(number%i);
+        number = number/i;
+        i *= 10;
+    }
+    if(copy == strong){
+        printf("It is a strong number.");
+    }else{
+        printf("It is not a strong number..");
+    }
+
+    return 0;
+}
+int factorial(int n){
+    if(n == 0){
+        return 1;
+    }
+    return n*factorial(n-1);
+}
