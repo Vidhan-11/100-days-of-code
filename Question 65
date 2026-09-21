@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main(){
+    int numbers[10]= {1,2,3,4,5,6,7,8,9,10},start = 0,end = 9,target;
+    printf("Which number do you want to find in this array?\n");
+    scanf("%d",&target);
+    while( start < end){
+        int mid = (end + start)/2;
+        if(target == mid){
+            printf("Element found at index %d",mid);
+            return 0;
+        }
+        if(target < mid){
+            end = mid;
+        }else{
+            start = mid;
+        }
+    }
+    return 0;
+}
