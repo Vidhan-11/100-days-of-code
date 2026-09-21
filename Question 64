@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main(){
+    int number,arr[4] ,limit =0;j = 10,max_ele,count =0,initial =0;
+    printf("Enter number : \n");
+    scanf("%d",&number);
+    for(int i = 0;i <4;i ++){
+        arr[i] = number % j;
+        number = number/j;
+        if(number == 0){
+            limit = i;
+            break;
+        }
+        j *= 10;
+    }
+    max_ele  = arr[0];
+    for(int i = 0;i <= limit;i++){
+        for(int k = 0;k <= limit;k++){
+            if(arr[i] == arr[j]){
+                count ++;
+            }
+          if(initial > count){
+                max_ele = arr[i];
+                initial = count;
+                count = 0;
+        }
+    }
+}
+    printf("Number %d occurs the maximum number of times in this number.",max_ele);
+
+    return 0;
+}
+}
