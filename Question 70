@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(){
+    int rotate,arr[] ={1,2,3,4,5,6,7,8};
+    int copy[sizeof(arr)];
+    printf("Print index around which you want to rotate your array \n");
+    scanf("%d",&rotate);
+    for(int i = 0;i < sizeof(arr); i++){
+        if( rotate + i < sizeof(arr)){
+            copy[ rotate + i] = arr[i];
+        }else{
+            copy[i - rotate] = arr[i];
+        }
+    }
+    printf("Rotated array is : \n");
+    printf("[");
+    for(int i = 0;i < sizeof(arr);i ++){
+       printf("%d,",copy[i]);
+
+    }
+    printf("]");
+    return 0;
+}
