@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+    int value,target_idx,arr[8]= {5,3,2,5,9,6,1};
+    printf("Input value to be inserted : \n");
+    scanf("%d",&value);
+    printf("Where do you want to input?\n");
+    scanf("%d",&target_idx);
+    for(int i = sizeof(arr) - 1;i > target_idx; i--){
+        arr[i] = arr[ i - 1 ];
+    }
+    arr[target_idx] = value;
+
+    return 0;
+}
