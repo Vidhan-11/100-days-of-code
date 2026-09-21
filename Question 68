@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main(){
+    int =target_idx,arr[8]= {5,3,2,5,9,6,1};
+    printf("Enter index of element you want to delete : \n");
+    scanf("%d",&target_idx);
+    for(int i = target_idx;i <= sizeof(arr) - 1; i++){
+        arr[i] = arr[ i + 1 ];
+    }
+    arr[sizeof(arr) - 1] = '\0';
+
+
+    return 0;
+}
