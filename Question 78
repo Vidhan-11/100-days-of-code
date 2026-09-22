@@ -1,0 +1,11 @@
+#include<stdio.h>
+//this is for a diagonal matrix.
+int main(){
+    int matrix_1[3][3],sum =0 ;
+    for(int i = 1;i < 3 ;i++){
+        sum += matrix_1[i][i];
+    }
+    printf("sum of main elements of this diagonal matrix is %d",sum);
+
+    return 0;
+}
