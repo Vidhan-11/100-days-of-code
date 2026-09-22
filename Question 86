@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+int main(){
+    char string[] ="Vidhan Rawat ";
+    for(int i = 0;i < sizeof(string)/2;i ++){
+        if(string[i] != string[sizeof(string) -i -1]){
+            printf("The given string is not a palindrome.");
+            return 0;
+        }
+    }
+    return 0;
+}
