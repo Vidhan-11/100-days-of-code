@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main(){
+    char string[] = "slient";
+    char string_1[] = "listen";
+    for(int i = 0; i < sizeof(string);i++){
+        for(int j = 0;j < sizeof(string);j++){
+            if(string[i] == string_1[j]){
+                string_1[j] = '\b';
+                continue;
+            }
+        }
+    }
+    for(int i = 0;i < sizeof(string);i++){
+        if(string[i] != '\b'){
+            printf("This string is not an anagram of the first one.");
+            return 0;
+        }
+    }
+    printf("These two strings are anagram of each other.");
+    return 0;
+}
