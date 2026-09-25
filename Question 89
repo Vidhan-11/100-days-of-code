@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(){
+    char string[] = "This is a string for change",target;
+    int frequency = 0;
+    printf("Enter the element you want to find frequency of: \n");
+    scanf("%c",&target);
+    for(int i = 0;i < sizeof(string);i++){
+        if(string[i] == target){
+            frequency++;
+        }
+    }
+    printf("The character in found %d times in this string.",frequency);
+
+    return 0;
+}
