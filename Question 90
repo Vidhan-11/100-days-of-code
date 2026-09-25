@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(){
+    char string[] = "Toggle this character in this string";
+    for(int i = 0;i < sizeof(string);i++){
+        if(string[i] == Target){
+            if(97 < string[i]){
+                string[i] -= 33; 
+            }else if(65 < string[i] && 91>string[i]){
+                string[i] += 33;
+            }
+        }
+    }
+    printf("%s",string);
+
+    return 0;
+}
