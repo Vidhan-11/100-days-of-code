@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(){
+    char string[] = "Find the first repeating lowercase alphabet";
+    for(int i = 0;i<sizeof(string);i++){
+        if(string[i] > 96 && string[i] < 121){
+            for(int j = 0;j < sizeof(string);j++){
+                if(string[j] == string[i]){
+                    printf("first lowercase letter to repeat is %c",string[i]);
+                    return 0;
+                }
+            }
+        }
+    }
+    printf("No lowercase letter in this string is repeated");
+    return 0;
+}
