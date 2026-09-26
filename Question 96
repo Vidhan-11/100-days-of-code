@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char string[] = "Reverse each word in this sentence without changing sequence of the words.";
+    int length = 0,idx = 0;
+    for(int i = 0;i < strlen(string);i++){
+        if(string[i] != " "){
+            length++;
+        }else{
+            for(int j = 0;j < length;j++){
+                char c = string[j];
+                string[j] = string[length - j];
+                string[length - j] = c;
+            }
+            idx = i + 1;
+        }
+    }
+    printf("%c",string);
+    return 0;
+}
