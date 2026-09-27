@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char name[30];
+    int spaces = 0;
+    printf("Input Name :\n");
+    fgets(name,30,stdin);
+    for(int i = 0 ; i < strlen(name);i++){
+        if(name[i] == ' '){
+            spaces++;
+        }
+    }
+    printf("%c.",name[0]);
+    for(int i = 1;i < strlen(name);i++){
+        if(spaces > 1){
+            if(name[i] == ' '){
+                printf("%c.",name[i + 1]);
+                spaces--;
+                continue;
+            }
+        }else{
+            printf("%c",name[i]);
+        }
+    }
+    return 0;
+}
