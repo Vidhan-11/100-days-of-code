@@ -16,9 +16,13 @@ int main(){
             if(name[i] == ' '){
                 printf("%c.",name[i + 1]);
                 spaces--;
-                continue;
             }
-        }else{
+        continue;
+        }
+        if(name[i] == ' '){
+            spaces--;
+        }
+        if(spaces == 0){
             printf("%c",name[i]);
         }
     }
