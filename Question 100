@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(){
+    char string[] = "Anything";
+    //Aim is to print all substring of this string.
+    for(int i = 0;i < strlen(string);i++){
+        for (int j = 1; j < strlen(string);j++){
+            for(int k = 0; k < j;k++){
+                printf("%s",string[i+k]);
+            }
+            printf("\t");
+        }
+        printf("\n");
+    }
+    return 0;
+}
