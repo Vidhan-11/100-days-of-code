@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<string.h>
+//conversion is only for the month of april.
+int main(){
+    char new[11] = "",date[] = "03/04/2024",last[5];
+    strncpy(new,date,2);
+    new[2] = '\0';
+    strcat(new,"-Apr-");
+    strncpy(last,date + 6,4);
+    last[4] = '\0';
+    strcat(new,last);
+    printf("Date in new format is %s",new);
+    return 0;
+}
