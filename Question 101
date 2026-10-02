@@ -1,29 +1,41 @@
 #include<stdio.h>
 int main(){
-    int arr[10],target,i,count = 0,last = 0;
-    printf("Input a sorted array:\n");
-    for( i = 0;i<10;i++){
-        printf("Input number %d\n",i+1);
-        scanf("%d",&arr[i]);
-        if(arr[i] == 101){
-            break;
+   int size;
+   printf("Input array size : \n");
+   scanf("%d",&size);
+    int num[size] , n ;
+    for(int i = 0; i<size;i++){
+        printf("Input number :%d \n", i+ 1);
+        scanf("%d",&num[i]);
+    }
+    int first = 0,last = size -1,high = -1,low = -1,same = 1;
+    
+    while(first <= last){
+        int mid = first + (last - first)/2 ;
+        if(num[mid] == n){
+            if(same == 1){
+                low = mid;
+                high = mid;
+                same --;
+            }
+            else if(same = 0){
+            if(mid > high ){
+                high = mid;
+            }else if(mid < low){
+                low = mid;
+            }
+        }
+        }
+        else if(num[mid] < n){
+            first = mid;
+        }else{
+            last = mid;
         }
     }
-    printf("Enter the number you want to find in this array\n");
-    scanf("%d",&target);
-    for(int j = 0;j <= i;j++){
-        if(arr[j] == target){
-            count++;
-            if(count == 1){
-            printf("first occurance at %d\n",j);
-            last = j;
-        }
-    }
-    }
-    if(count > 0){
-        printf("Last occurance at %d",last);
+    if(high != -1){
+    printf("First index of occurance is %d\nLast occurance of this element is %d\n",low , high);
     }else{
-        printf("\n%d,%d",-1,-1);
+        printf("Index not found :%d,%d",low,high);
     }
     return 0;
 }
