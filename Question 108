@@ -8,20 +8,20 @@ int main(){
         printf("Numbers : %d\n",i+1);
         scanf("%d",&numbers[i]);
     }
-    int prefix[n],suffix[n];
+    int pre_product[n],post_product[n];
     for(int i = 1;i<n;i++){
         int total_1 = 1;
         total_1 *= numbers[i-1];
-        prefix[i] = total_1;
+        pre_product[i] = total_1;
     }
     for(int i = n-2;i>0;i++){
         int total_2 = 1;
         total_2 *= number[i+1];
-        suffix[i] = total_2;
+        post_product[i] = total_2;
     }
     for(int i = 0;i<n;i++){
         numbers[i] = 1;
-        numbers[i] = prefix[i]*suffix[i];
+        numbers[i] = pre_product[i]*post_product[i];
     }
     printf("Result:\n");
     for(int i = 0;i<n;i++){
