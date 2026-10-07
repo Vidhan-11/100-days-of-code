@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+    int n,k,sum = 0,check = 0;
+    printf("Input size of array:\n");
+    scanf("%d",&n);
+    int numbers[n];
+    printf("Input array of integers :\n");
+    for(int i = 0;i < n;i++){
+        printf("Number %d : ",i+1);
+        scanf("%d",&numbers[i]);
+    }
+    printf("\nInput subarray size :\n");
+    scanf("%d",&k);
+    for(int i = 0;i<k;i++){
+        check += numbers[i];
+    }
+    sum = check;
+    for(int i = k;i < n;i++){
+        check -= numbers[i-k];
+        check += numbers[i];
+        if(check > sum){
+            sum = check;
+        }
+    }
+    printf("\nMax sum of subarray of size %d is : %d ",k,sum);
+    return 0;
+}
