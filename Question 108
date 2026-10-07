@@ -14,7 +14,7 @@ int main(){
         total_1 *= numbers[i-1];
         pre_product[i] = total_1;
     }
-    for(int i = n-2;i>0;i++){
+    for(int i = n-2;i>0;i--){
         int total_2 = 1;
         total_2 *= number[i+1];
         post_product[i] = total_2;
