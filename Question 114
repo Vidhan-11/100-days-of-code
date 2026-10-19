@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+char string[40],String[40];
+int length = 0,str_index = 0;
+printf("Enter a string : \n");
+fgets(string,40,stdin);
+for(int i = 0; arr[i] != '\n';i++){
+        str_index = i;
+for(int j = i + 1;arr[j] != arr[i];j++){
+length++;
+if(string.len() < length){
+break;
+}
+}
+}
+strncpy(String,string + str_index,length);
+printf("Length of longest substring without repeation is : %d\n",length);
+printf("Substring is\n");
+printf("%s",String);
+return 0;
+}
