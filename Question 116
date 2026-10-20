@@ -1,0 +1,31 @@
+#include<stdio.h>
+void two_sum(int numbers[],int target,int size,int* indices[2]);
+int main(){
+int n;
+printf("What is size of array:\n");
+scanf("%d",&n);
+int a[n],target,indices[2] = {-1,-1};
+printf("Input array of positive integers:\n");
+for(int i = 0;i<n;i++){
+        printf("Number %d : ",i+1);
+        scanf("%d",&a[i]);
+}
+printf("Input target number : ");
+scanf("%d",&target);
+int result = two_sum(a,target,n,&indices);
+printf("%d\t%d",result++,result);
+return 0;
+}
+void two_sum(int numbers[],int target,int size,int* indices[2]){
+        int i = 0,j = size-1,i;
+        while(i != j){
+                if(numbers[i] + numbers[j] == target){
+                        indices = {i,j};
+                        return ;
+                }else if(numbers[i] + numbers[j] < target){
+                        i++;
+                }else{
+                        j--;
+                }
+        }
+}
