@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+char s[20],t[20];
+printf("Input first one\n");
+fgets(s,20,stdin);
+printf("Input second string\n");
+fgets(t,20,stdin);
+if(strlen(s) != strlen(t)){
+        printf("\nThese are not anagram");
+        return 0;
+}
+for(int i = 0;i<strlen(s);i++){
+        for(int j = 0;j<strlen(s);j++){
+                if(s[i]==t[j]){
+                        t[j] = ' ';
+                        continue;
+                }
+        }
+        printf("\nThis is not an anagram");
+        break;
+}
+printf("\nThese are anagrams");
+return 0;
+}
+  
