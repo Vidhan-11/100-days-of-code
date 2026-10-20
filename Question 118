@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(){
+        int n,sum = 0;
+        printf("Input array size : ");
+        scanf("%d",&n);
+        printf("Input numbers form 0 to n except a random number :\n");
+        int a[n-1];
+        printf("Input numbers\n");
+        for(int i = 0 ; i< n-1;i++){
+                scanf("%d",&a[i]);
+                sum += a[i];
+        }
+        printf("Missing number is : %d", (n*(n+1)/2) - sum);
+        return 0;
+}
