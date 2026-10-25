@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(){
+        FILE* fptr;
+        fptr = fopen("file.txt","w");
+        char name[20];
+        int age;
+        printf("Name : ");
+        fgets(name,20,stdin);
+        fprintf(fptr,"Name of user is : %s\n",name);
+        printf("age : ");
+        scanf("%d",&age);
+        fprintf(fptr,"Age of user is : %d",age);
+        fclose(fptr);
+        return 0;
+}
