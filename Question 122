@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(){
+        FILE* fptr;
+        fptr = fopen("info.txt","r");
+        if( fptr == NULL){
+                printf("Unable to open file");
+                return 1;
+        }
+        char line[100];
+        while( fgets(line,sizeof(line),fptr) != '\0'){
+                printf("%s",line);
+        }
+        printf("\nExecution successful!");
+        fclose(fptr);
+        return 0;
+}
