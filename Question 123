@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main(){
+        int characters = 0,lines = 0, words = 0;
+        FILE* file ;
+        file = fopen("info.txt","r");
+        if ( file == NULL){
+                printf("Error in opening file");
+                return 1;
+        }
+        char c;
+        while( c  != '\0'){
+                (fscanf(file,"%c",&c);
+                 if( c == ' '){
+                words ++;
+                }
+                if( c == '\n'){
+                line ++;
+                }
+                else{
+                characters ++;
+                }
+        }
+        printf("In this file\nCharacters = %d\nLines = %d\nWords = %d",characters,lines,words);
+        fclose(file);
+        return 0;
+}
