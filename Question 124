@@ -1,0 +1,17 @@
+int main(){
+        FILE* fptr,file;
+        file = fopen("old.txt","r");
+        fptr = fopen("new.txt","w");
+        if(file == NULL || fptr == NULL){
+                printf("Some error occured while opening file");
+                return 1;
+        }
+        char c;
+        while(c != '\0'){
+                c = fgetc(file);
+                fputc(c,fptr);
+        }
+        fclose(file,fptr);
+        printf("Execution successful!");
+        return 0;
+}
