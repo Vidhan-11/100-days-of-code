@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(){
+        FILE* file;
+        file = fopen("Existing.txt","a");
+        if(file == NULL){
+                printf("Some error occured while opening file");
+                return 1;
+        }
+        printf("Write the line you want to add in Existing.txt\n");
+        char line[40];
+        fgets(line,40,stdin);
+        printf("Line added to file");
+        fclose(file);
+        return 0;
+}
