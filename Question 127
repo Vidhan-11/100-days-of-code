@@ -1,0 +1,26 @@
+
+#include<stdio.h>
+#include<ctype>
+int main(){
+    FILE* fptr;
+    fptr = fopen("old.txt","r");
+    if(fptr == NULL){
+        printf("Error in opening file\n");
+        return 1;
+    }
+    FILE* file;
+    if(file == NULL){
+        printf("Error in opening file\n");
+        return 1;
+    }
+    file = fopen("new.txt","w");
+    char c;
+    while(c != '\0'){
+        fscanf(fptr,"%c",&c);
+        toupper(c);
+        fprintf(file,"%c",c);
+    }
+    fclose(fptr);
+    fclose(file);
+    return 0;
+}
