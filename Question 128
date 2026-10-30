@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main(){
+    FILE* file;
+    int vowel = 0, consonent = 0;
+    file = fopen("old.txt","r");
+    char c;
+    while(c != '\0'){
+        fscanf(file,"%c",&c);
+        if( c == 'a' || c == 'i' || c == 'e' || c == 'o' || c == 'u'){
+            vowel++;
+        }else if( c == 'A' || c == 'I' || c == 'E' || c == 'O' || c == 'U'){
+            vowel++;
+        }else{
+            consonent ++;
+        }
+    }
+    fclose(file);
+    printf("Vowels : %d\nConsonent : %d",vowel,consonent);
+    return 0;
+}
