@@ -1,0 +1,19 @@
+#include<stdio.h>
+struct student{
+    char name[20];
+    int roll_num;
+    float marks;
+};
+int main(){
+    struct student s1 = {"Alex",67,89.4};
+    FILE* file = fopen("Records.txt","w+");
+    fprintf(file,"Name : %s\nRoll number : %d\nMakrs : %.2f",s1.name,s1.roll_num,s1.marks);
+    fclose(file);
+    FILE* file = fopen("Records.txt","r");
+    char c;
+    while(fscanf(file,"%c",&c) > 0){
+        printf("%c",c);
+    }
+    printf("\nThis was the record of student.");
+    return 0;
+}
