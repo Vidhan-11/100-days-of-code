@@ -1,0 +1,27 @@
+#include<stdio.h>
+enum day{
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THRUSDAY,
+    FRIDAY,
+    SATURDAY,
+    SUNDAY,
+};
+int main(){
+    enum Day day
+    for ( day = MONDAY;day <= SUNDAY;day++){
+        printf("%d : ",day);
+
+        switch (day) {
+            case SUNDAY:    printf("SUNDAY\n"); break;
+            case MONDAY:    printf("MONDAY\n"); break;
+            case TUESDAY:   printf("TUESDAY\n"); break;
+            case WEDNESDAY: printf("WEDNESDAY\n"); break;
+            case THURSDAY:  printf("THURSDAY\n"); break;
+            case FRIDAY:    printf("FRIDAY\n"); break;
+            case SATURDAY:  printf("SATURDAY\n"); break;
+        }
+    }
+    return 0;
+}
