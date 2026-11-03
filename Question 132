@@ -1,0 +1,23 @@
+#include<stdio.h>
+enum traficlight{
+    RED,
+    YELLOW,
+    GREEN,
+};
+int main(){
+    enum traficlight light = RED;
+    switch(light){
+        case RED:
+            printf("\nSTOP");
+            break;
+        case YELLOW:
+            printf("\nWAIT");
+            break;
+        case GREEN:
+            printf("\nGO");
+            break;
+        default:
+            printf("\nInvalid entry");    
+    }
+    return 0;
+}
