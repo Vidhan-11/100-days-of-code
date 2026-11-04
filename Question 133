@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+enum Month {
+    JANUARY = 1, FEBRUARY, MARCH, APRIL, MAY, JUNE,
+    JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER
+};
+
+int getDays(enum Month m) {
+    switch (m) {
+        case APRIL: case JUNE: case SEPTEMBER: case NOVEMBER:
+            return 30;
+        case FEBRUARY:
+            return 28;   // ignoring leap years
+        default:
+            return 31;
+    }
+}
+
+int main() {
+    for (enum Month m = JANUARY; m <= DECEMBER; m++) {
+        printf("Month %d has %d days.
+", m, getDays(m));
+    }
+    return 0;
+}
