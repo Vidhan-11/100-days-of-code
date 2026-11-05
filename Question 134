@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+enum Status {
+    SUCCESS,
+    FAILURE,
+    TIMEOUT
+};
+
+void printMessage(enum Status s) {
+    switch (s) {
+        case SUCCESS:
+            printf("Operation completed successfully.
+");
+            break;
+        case FAILURE:
+            printf("Operation failed.
+");
+            break;
+        case TIMEOUT:
+            printf("Operation timed out.
+");
+            break;
+    }
+}
+
+int main() {
+    enum Status current = TIMEOUT;
+    printMessage(current);
+    return 0;
+}
