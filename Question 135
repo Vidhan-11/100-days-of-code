@@ -1,0 +1,14 @@
+#include<stdio.h>
+enum status{
+    Start = 10,
+    Running,
+    stopped,
+    error
+};
+int main(){
+    enum status st;
+    for(st = Start;st<error;st++){
+        printf("%d\t",st);
+    }
+    return 0;
+}
