@@ -1,0 +1,40 @@
+#include<stdio.h>
+enum choices{
+    ADD = 1,
+    SUBTRACT,
+    MULTIPLY,
+    DIVIDE
+}; 
+int main(){
+    enum choices choose;
+    start:
+    printf("\nEnter 1 to add\n2 to subtract\n3 to multiply\n4 to divide \n");
+    int op;
+    scanf("%d",&op);
+    printf("Enter number 1 : ");
+    int num1,num2;
+    scanf("%d",&num1);
+    printf("\nEnter number 2 : ");
+    scanf("%d",&num2);
+    switch (op)
+    {
+    case ADD:
+        printf("\nResult : %d",num1 + num2);
+        break;
+    case SUBTRACT:
+        printf("\nResult : %d",num1 - num2);
+        break;
+    case MULTIPLY:
+        printf("\nResult : %d",num1*num2);
+        break;
+    case DIVIDE:
+        printf("\nResult : %d",num1/num2);
+        break;
+    default:
+        printf("\nKindly choose a valid option.");
+        goto start ;
+        break;
+    }
+    printf("\nExecution is complete!");
+    return 0;
+}
