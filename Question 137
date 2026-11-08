@@ -1,0 +1,28 @@
+#include<stdio.h>
+enum roles{
+    ADMIN = 1,
+    USER,
+    GUEST
+};
+int main(){
+    enum roles role;
+    int choice;
+    printf("\nEnter your role in this place. Press 1 for Admin\n2 for User\n3 for Guest\n");
+    scanf("%d",&choice);
+    switch (choice){
+    case ADMIN:
+        printf("\nWelecome admin! What would you like to do?");
+        break;
+    case USER:
+        printf("\nWelecome user! What can I do for you ?");
+        break;
+    case GUEST:
+        printf("\nWelecome guest! Whould you like to make an account?");
+        break;
+    default:
+        printf("\nInvalid choice is entered");
+        return 1;
+    }
+    printf("\n\n------Execution Sussessful------");
+    return 0; 
+}
