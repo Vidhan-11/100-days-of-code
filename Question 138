@@ -1,0 +1,24 @@
+#include<stdio.h>
+enum names{
+    Arnav = 1 ,
+    Ritvik,
+    Shauraya
+};
+int main(){
+    enum names name;
+    for(name = Arnav; name <= Shauraya;name ++){
+        printf("%d\t:\t",name);
+        switch(name){
+            case Arnav:
+                printf("%s\n",Arnav);
+                break;
+            case Ritvik:
+                printf("%s\n",Ritvik);
+                break;
+            case Shauraya:
+                printf("%s\n",Shauraya);
+                break;          
+        }      
+    }
+    return 0;
+}
