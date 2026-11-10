@@ -1,0 +1,17 @@
+#include<stdio.h>
+enum values{
+    value_1 = 1,
+    value_2,
+    value_3,
+    value_4,
+    value_5
+};
+int main(){
+    enum values v;
+    printf("\nThis shows that values in enum are stored as integers.\n");
+    for(v = value_1;v <= value_5;v++){
+        printf("%d\t",v);
+    }
+    printf("\nHence all values of enum are stored in form of integers.");
+    return 0;
+}
