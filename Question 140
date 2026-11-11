@@ -1,0 +1,42 @@
+#include<stdio.h>
+typedef struct{
+    enum gender{
+        male,
+        female,
+        transgender,
+        other
+    };
+}Gender;
+int main(){
+    Gender person_1 = {female};
+    printf("\nEnter the person's gender : \nThese are the following numbers for genders->\n0 - male\n1-female\n2-transgender\n3-other\n");
+    int n;
+    scanf("%d",&n);
+    switch (n)
+    {
+    case male:
+        if(n == male){
+            printf("\nThe person in queston is a male.");
+            break;
+        }
+    case female:
+    if(n == female){
+        printf("\nThe person in question is a female.");
+        break;
+    }
+    case transgender:
+        if(n == transgender){
+        printf("\nThe person in question is a transgender.");
+        break;
+        }
+    case other:
+        if(n == other){
+            printf("\nThe person in question is of an unknown gender.");
+            break;
+        }
+    default:
+        printf("\nInvalid entry!!");
+    }
+    printf("\nGender of this person is revieled!!");
+    return 0;
+}
