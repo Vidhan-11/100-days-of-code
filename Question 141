@@ -1,0 +1,20 @@
+#include<stdio.h>
+typedef struct{
+    char name[20];
+    int age,roll_num;
+    float marks;
+}student;
+int main(){
+    student s1;
+    printf("\nEnter student's name : ");
+    fgets(s1.name,20,stdin);
+    printf("\nEnter student's age : ");
+    scanf("%d",&s1.age);
+    printf("\nEnter student's roll number : ");
+    scanf("%d",&s1.roll_num);
+    printf("\nEnter student's average marks : ");
+    scanf("%f",&s1.marks);
+    printf("\n-----STUDENT RECORDS-----\n");
+    printf("Name : %s\nAge : %d\nRoll number : %d\nMakrs : %.2f",s1.name,s1.age,s1.roll_num,s1.marks);
+    return 0;
+}
