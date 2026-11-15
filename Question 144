@@ -1,0 +1,17 @@
+#include<stdio.h>
+struct members{
+    char name[20],proffesion[20];
+    int age;
+    float salary;
+};
+void print_members(struct member m);
+int main(){
+    struct members n = {"Rahul","MMA_Fighter",23,36.5};
+    print_members(n);
+    printf("\nThese were all the members of a structure printed throung a function.");
+    return 0;
+}
+void print_members(struct members m){
+    printf("\nName : %s\nProffesion : %s\nAge : %d\nSalary : %.2f\n",m.name,m.proffesion,m.age,m.salary);
+    return;
+}
