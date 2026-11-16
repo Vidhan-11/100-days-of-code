@@ -1,0 +1,32 @@
+#include<stdio.h>
+typedef struct{
+    char name[20];
+    int age;
+    float average;
+}student;
+student highest_marks(student s[],int size);
+int main(){
+    student m[3];
+    for(int i = 0;i<3;i++){
+        printf("\nStudent %d",i+1);
+        printf("\nName : ");
+        fgets(m[i].name,20,stdin);
+        printf("\nAge : ");
+        scanf("%d",m[i].age);
+        printf("\nAverage marks : ");
+        scanf("%f",m[i].average);
+    }
+    student n = highest_marks(m,3);
+    printf("\nStudent with best performance->\nName : %s\nAge : %d\nAverage marks : %.2f",n.name,n.age,n.average);
+    return 0;
+}
+student highest_marks(student s[],int size){
+    student m;
+    m = s[0];
+    for(int i = 0; i < size;i++){
+        if(m.average<s[i].average){
+            m = s[i];
+        }
+    }
+    return m;
+}
