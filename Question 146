@@ -1,0 +1,20 @@
+#include<stdio.h>
+typedef struct{
+    char joining_date;
+}joining;
+typedef struct{
+    char name[20];
+    int ID;
+    joining date;
+}employee;
+int main(){
+    employee e;
+    printf("\nName of employee : ");
+    scanf("%20s",&e.name);
+    printf("\nID : ");
+    scanf("%d",&e.name);
+    printf("\nJoining date : ");
+    scanf("%20s",&e.date.joining_date);
+    printf("\nName : %s | ID : %d | Joining date : %s",e.name,e.ID,e.date.joining_date);
+    return 0;
+}
